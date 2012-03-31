@@ -3,8 +3,7 @@
  */
 package features.mouse;
 
-import static org.junit.Assert.*;
-import features.mouse.FizzBuzz;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -48,18 +47,18 @@ public class FizzBuzzTest {
 
 
 	// 指定された数字が０の場合、３でも５でも割り切れるのでFizzBuzzを返すこと
-	@Test
+	@Test(expected = RuntimeException.class)
 	public void testFizzBuzz_3と5で割り切れる場合０の場合() {
 		FizzBuzz target = new FizzBuzz();
-		assertEquals("0", target.fizzBuzz(0)) ;
+		target.fizzBuzz(0);
 	}
 
 
 	// -15も３でも５でも割り切れるのでFizzBuzzを返すこと
-	@Test
+	@Test(expected = RuntimeException.class)
 	public void testFizzBuzz_minus15も３でも５でも割り切れる() {
 		FizzBuzz target = new FizzBuzz();
-		assertEquals("-15", target.fizzBuzz(-15)) ;
+		target.fizzBuzz(-15);
 	}
 //
 //	// intをあふれる場合
