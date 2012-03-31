@@ -51,7 +51,7 @@ public class FizzBuzzTest {
 	@Test
 	public void testFizzBuzz_3と5で割り切れる場合０の場合() {
 		FizzBuzz target = new FizzBuzz();
-		assertEquals("FizzBuzz", target.fizzBuzz(0)) ;
+		assertEquals("0", target.fizzBuzz(0)) ;
 	}
 
 
@@ -59,7 +59,7 @@ public class FizzBuzzTest {
 	@Test
 	public void testFizzBuzz_minus15も３でも５でも割り切れる() {
 		FizzBuzz target = new FizzBuzz();
-		assertEquals("FizzBuzz", target.fizzBuzz(-15)) ;
+		assertEquals("-15", target.fizzBuzz(-15)) ;
 	}
 //
 //	// intをあふれる場合
