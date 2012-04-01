@@ -11,7 +11,7 @@ public class Myers implements features.Myers {
 		}
 		
 		if (lineA == lineB && lineB == lineC) {
-			return "³OŠpŒ`";
+			return "³OŠpŒ`"; 
 		} else if (lineA == lineB || lineB == lineC || lineC == lineA) {
 			return "“ñ“™•ÓOŠpŒ`";
 		} else {
