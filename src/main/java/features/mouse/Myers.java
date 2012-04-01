@@ -11,11 +11,11 @@ public class Myers implements features.Myers {
 		}
 		
 		if (lineA == lineB && lineB == lineC) {
-			return "";
+			return "正三角形";
 		} else if (lineA == lineB || lineB == lineC || lineC == lineA) {
-			return "";
+			return "二等辺三角形";
 		} else {
-			return "";
+			return "不等辺三角形";
 		}
 	}
 
