@@ -16,44 +16,59 @@ public class MyersTest {
 	}
 
 	/**
-	 * æ­£ä¸‰è§’å½¢:ã™ã¹ã¦ã®è¾ºãŒåŒã˜é•·ã•
+	 * ³OŠpŒ`:‚·‚×‚Ä‚Ì•Ó‚ª“¯‚¶’·‚³
 	 */
 	@Test
-	public void æ­£ä¸‰è§’å½¢(){
-		assertEquals("æ­£ä¸‰è§’å½¢", target.getName(1, 1, 1));
+	public void ³OŠpŒ`(){
+		assertEquals("³OŠpŒ`", target.getName(1, 1, 1));
 	}
 	
 	/**
-	 * äºŒç­‰è¾ºä¸‰è§’å½¢:2ã¤ã®è¾ºã ã‘ãŒåŒã˜
+	 * “ñ“™•ÓOŠpŒ`:2‚Â‚Ì•Ó‚¾‚¯‚ª“¯‚¶
 	 */
 	@Test
-	public void äºŒç­‰è¾ºä¸‰è§’å½¢(){
-		assertEquals("äºŒç­‰è¾ºä¸‰è§’å½¢", target.getName(2, 2, 1));
+	public void “ñ“™•ÓOŠpŒ`(){
+		assertEquals("“ñ“™•ÓOŠpŒ`", target.getName(2, 2, 1));
 	}
 	
 	/**
-	 * ä¸ç­‰è¾ºä¸‰è§’å½¢:ã™ã¹ã¦ã®è¾ºãŒé•ã†é•·ã•
+	 * •s“™•ÓOŠpŒ`:‚·‚×‚Ä‚Ì•Ó‚ªˆá‚¤’·‚³
 	 */
 	@Test
-	public void ä¸ç­‰è¾ºä¸‰è§’å½¢(){
-		assertEquals("ä¸ç­‰è¾ºä¸‰è§’å½¢", target.getName(1, 2, 3));
+	public void •s“™•ÓOŠpŒ`(){
+		assertEquals("•s“™•ÓOŠpŒ`", target.getName(2, 3, 4));
 	}
 
 	/**
-	 * ä¸ç­‰è¾ºä¸‰è§’å½¢:ã™ã¹ã¦ã®è¾ºãŒé•ã†é•·ã•
-	 * ä¸‰è§’å½¢ã«ãªã‚‰ãªã„å ´åˆ: ã„ãšã‚Œã‹ã®è¾ºãŒ0
+	 * OŠpŒ`‚É‚È‚ç‚È‚¢ê‡: ‚¢‚¸‚ê‚©‚Ì•Ó‚ª0
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void éä¸‰è§’å½¢_value0(){
+	public void ”ñOŠpŒ`_value0(){
 		target.getName(0, 1, 1);
 	}
 
 	/**
-	 * ä¸ç­‰è¾ºä¸‰è§’å½¢:ã™ã¹ã¦ã®è¾ºãŒé•ã†é•·ã•
-	 * ä¸‰è§’å½¢ã«ãªã‚‰ãªã„å ´åˆ: ã„ãšã‚Œã‹ã®è¾ºãŒãƒã‚¤ãƒŠã‚¹å€¤
+	 * OŠpŒ`‚É‚È‚ç‚È‚¢ê‡: OŠp•s“™®‚ª¬—§‚µ‚È‚¢‚à‚Ì
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void éä¸‰è§’å½¢_value_minus(){
+	public void ”ñOŠpŒ`_OŠp•s“™®(){
+		target.getName(1, 1, 10);
+	}
+
+	/**
+	 * OŠpŒ`‚É‚È‚ç‚È‚¢ê‡: ‚¢‚¸‚ê‚©‚Ì•Ó‚ª0
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void ”ñOŠpŒ`_‚¢‚¸‚ê‚©‚Ì•Ó‚ª0(){
+		target.getName(0, 0, 0);
+	}
+
+	/**
+	 * •s“™•ÓOŠpŒ`:‚·‚×‚Ä‚Ì•Ó‚ªˆá‚¤’·‚³
+	 * OŠpŒ`‚É‚È‚ç‚È‚¢ê‡: ‚¢‚¸‚ê‚©‚Ì•Ó‚ªƒ}ƒCƒiƒX’l
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void ”ñOŠpŒ`_‚¢‚¸‚ê‚©‚Ì•Ó‚ªƒ}ƒCƒiƒX’l(){
 		target.getName(-1, 1, 1);
 	}
 
