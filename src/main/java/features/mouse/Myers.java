@@ -1,10 +1,10 @@
 package features.mouse;
 
 public class Myers implements features.Myers {
-
+	
 	@Override
 	public String getName(int x, int y, int z) {
-
+		
 		if (x <= 0 || y <= 0 || z <= 0) {
 			throw new IllegalArgumentException();	
 		}
@@ -13,11 +13,11 @@ public class Myers implements features.Myers {
 		}
 		
 		if (x == y && y == z) {
-			return "³OŠpŒ`"; 
+			return "æ­£ä¸‰è§’å½¢"; 
 		} else if (x == y || y == z || z == x) {
-			return "“ñ“™•ÓOŠpŒ`";
+			return "äºŒç­‰è¾ºä¸‰è§’å½¢";
 		} else {
-			return "•s“™•ÓOŠpŒ`";
+			return "ä¸ç­‰è¾ºä¸‰è§’å½¢";
 		}
 	}
 }

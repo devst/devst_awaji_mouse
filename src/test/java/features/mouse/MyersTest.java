@@ -7,69 +7,78 @@ import org.junit.Test;
 import features.mouse.Myers;
 
 public class MyersTest {
-
+	
 	Myers target;
 	
 	@Before
 	public void setUp() throws Exception {
 		target = new Myers();
 	}
-
+	
 	/**
-	 * ³OŠpŒ`:‚·‚×‚Ä‚Ì•Ó‚ª“¯‚¶’·‚³
+	 * æ­£ä¸‰è§’å½¢:ã™ã¹ã¦ã®è¾ºãŒåŒã˜é•·ã•
 	 */
 	@Test
-	public void ³OŠpŒ`(){
-		assertEquals("³OŠpŒ`", target.getName(1, 1, 1));
+	public void æ­£ä¸‰è§’å½¢(){
+		assertEquals("æ­£ä¸‰è§’å½¢", target.getName(1, 1, 1));
 	}
 	
 	/**
-	 * “ñ“™•ÓOŠpŒ`:2‚Â‚Ì•Ó‚¾‚¯‚ª“¯‚¶
+	 * äºŒç­‰è¾ºä¸‰è§’å½¢:2ã¤ã®è¾ºã ã‘ãŒåŒã˜
 	 */
 	@Test
-	public void “ñ“™•ÓOŠpŒ`(){
-		assertEquals("“ñ“™•ÓOŠpŒ`", target.getName(2, 2, 1));
+	public void äºŒç­‰è¾ºä¸‰è§’å½¢(){
+		assertEquals("äºŒç­‰è¾ºä¸‰è§’å½¢", target.getName(2, 2, 1));
 	}
 	
 	/**
-	 * •s“™•ÓOŠpŒ`:‚·‚×‚Ä‚Ì•Ó‚ªˆá‚¤’·‚³
+	 * ä¸ç­‰è¾ºä¸‰è§’å½¢:ã™ã¹ã¦ã®è¾ºãŒé•ã†é•·ã•
 	 */
 	@Test
-	public void •s“™•ÓOŠpŒ`(){
-		assertEquals("•s“™•ÓOŠpŒ`", target.getName(2, 3, 4));
+	public void ä¸ç­‰è¾ºä¸‰è§’å½¢(){
+		assertEquals("ä¸ç­‰è¾ºä¸‰è§’å½¢", target.getName(2, 3, 4));
 	}
-
+	
 	/**
-	 * OŠpŒ`‚É‚È‚ç‚È‚¢ê‡: ‚¢‚¸‚ê‚©‚Ì•Ó‚ª0
+	 * ä¸‰è§’å½¢ã«ãªã‚‰ãªã„å ´åˆ: ã„ãšã‚Œã‹ã®è¾ºãŒ0
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void ”ñOŠpŒ`_value0(){
+	public void éä¸‰è§’å½¢_value0(){
 		target.getName(0, 1, 1);
 	}
-
+	
 	/**
-	 * OŠpŒ`‚É‚È‚ç‚È‚¢ê‡: OŠp•s“™®‚ª¬—§‚µ‚È‚¢‚à‚Ì
+	 * ä¸‰è§’å½¢ã«ãªã‚‰ãªã„å ´åˆ: ä¸‰è§’ä¸ç­‰å¼ãŒæˆç«‹ã—ãªã„ã‚‚ã®
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void ”ñOŠpŒ`_OŠp•s“™®(){
+	public void éä¸‰è§’å½¢_ä¸‰è§’ä¸ç­‰å¼(){
 		target.getName(1, 1, 10);
 	}
-
+	
 	/**
-	 * OŠpŒ`‚É‚È‚ç‚È‚¢ê‡: ‚¢‚¸‚ê‚©‚Ì•Ó‚ª0
+	 * ä¸‰è§’å½¢ã«ãªã‚‰ãªã„å ´åˆ: ã„ãšã‚Œã‹ã®è¾ºãŒ0
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void ”ñOŠpŒ`_‚¢‚¸‚ê‚©‚Ì•Ó‚ª0(){
+	public void éä¸‰è§’å½¢_ã„ãšã‚Œã‹ã®è¾ºãŒ0(){
 		target.getName(0, 0, 0);
 	}
-
+	
 	/**
-	 * •s“™•ÓOŠpŒ`:‚·‚×‚Ä‚Ì•Ó‚ªˆá‚¤’·‚³
-	 * OŠpŒ`‚É‚È‚ç‚È‚¢ê‡: ‚¢‚¸‚ê‚©‚Ì•Ó‚ªƒ}ƒCƒiƒX’l
+	 * ä¸ç­‰è¾ºä¸‰è§’å½¢:ã™ã¹ã¦ã®è¾ºãŒé•ã†é•·ã•
+	 * ä¸‰è§’å½¢ã«ãªã‚‰ãªã„å ´åˆ: ã„ãšã‚Œã‹ã®è¾ºãŒãƒã‚¤ãƒŠã‚¹å€¤
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void ”ñOŠpŒ`_‚¢‚¸‚ê‚©‚Ì•Ó‚ªƒ}ƒCƒiƒX’l(){
+	public void éä¸‰è§’å½¢_ã„ãšã‚Œã‹ã®è¾ºãŒãƒã‚¤ãƒŠã‚¹å€¤(){
 		target.getName(-1, 1, 1);
+	}
+	
+	/**
+	 * ä¸ç­‰è¾ºä¸‰è§’å½¢:ã™ã¹ã¦ã®è¾ºãŒé•ã†é•·ã•
+	 * ä¸‰è§’å½¢ã«ãªã‚‰ãªã„å ´åˆ: ã„ãšã‚Œã‹ã®è¾ºãŒãƒã‚¤ãƒŠã‚¹å€¤
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void éä¸‰è§’å½¢_ã„ãšã‚Œã‹ã®è¾ºãŒãƒã‚¤ãƒŠã‚¹å€¤2(){
+		target.getName(1,2,100);
 	}
 
 }
