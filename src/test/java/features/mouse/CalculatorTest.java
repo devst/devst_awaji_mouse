@@ -108,6 +108,7 @@ public class CalculatorTest {
 	public void 割り算_小数第四位_五入(){
 		assertEquals("0.063", target.execute("1/16"));
 	}
+
 	@Test
 	public void 割り算_小数第四位_四捨(){
 		assertEquals("0.071", target.execute("1/14"));
