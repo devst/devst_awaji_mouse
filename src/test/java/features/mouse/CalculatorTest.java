@@ -105,12 +105,12 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void 割り算_小数第四位(){
-		assertEquals("0.0625", target.execute("1/16"));
+	public void 割り算_小数第四位_五入(){
+		assertEquals("0.063", target.execute("1/16"));
+	}
+	@Test
+	public void 割り算_小数第四位_四捨(){
+		assertEquals("0.071", target.execute("1/14"));
 	}
 
-	@Test
-	public void 割り算_小数第五位(){
-		assertEquals("0.6667", target.execute("2/3"));
-	}
 }

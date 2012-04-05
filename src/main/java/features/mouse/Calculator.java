@@ -91,8 +91,8 @@ public class Calculator implements features.Calculator {
 			double	b = Double.parseDouble(valueB) ;
 			BigDecimal bi = new BigDecimal(String.valueOf(a / b));
 
-			double k3= bi.setScale(5, BigDecimal.ROUND_HALF_UP).doubleValue();
-			DecimalFormat exFormat1 = new DecimalFormat("#.####");
+			double k3= bi.setScale(3, BigDecimal.ROUND_HALF_UP).doubleValue();
+			DecimalFormat exFormat1 = new DecimalFormat("#.###");
 			return exFormat1.format(k3) ;
 		}
 
