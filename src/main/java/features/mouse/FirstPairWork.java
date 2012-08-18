@@ -9,7 +9,7 @@ public class FirstPairWork implements features.FirstPairWork {
 
 	@Override
 	public String getIkigomi() {
-		return "楽しく焦らずに";
+		return "20120818 changed touche the jenkins";
 	}
 
 }
