@@ -4,7 +4,8 @@ public class FirstPairWork implements features.FirstPairWork {
 
 	@Override
 	public String getMembers() {
-		return "nara_reimei & Aki";
+		//return "nara_reimei & Aki";
+		return null;
 	}
 
 	@Override
